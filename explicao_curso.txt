@@ -1,0 +1,6 @@
+** As planilhas descritas a seguir geram o gráfico a partir dos dados que são obtidos nos cenários
+Planilha de plano de testes:
+	Define o que será testado? como? porque? Além de fazer anotações sobre o desenvolvimento do plano.
+Planilha de testes de aceitação:
+	Diz respeito ao usuário final, se o que o sistema realiza é o esperado pelo usuário. Essa planilha
+	possui uma aba sobre o resultado esperado pelo cliente no cenário, e algum comentário sobre a funcionalidade.
