@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="GerClienteTest_ProcuraClienteCSV" project="SistemaBancario" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="negocio.GerClienteTest_ProcuraClienteCSV" time="0.0">
+    <testcase name="initializationError" classname="negocio.GerClienteTest_ProcuraClienteCSV" time="0.0">
+      <error>java.lang.RuntimeException: Could not successfully read parameters from file: dados_banco_pesquisa_cliente.csv
+	at junitparams.internal.parameters.ParametersFromFile.paramsFromFile(ParametersFromFile.java:43)
+	at junitparams.internal.parameters.ParametersFromFile.getParameters(ParametersFromFile.java:22)
+	at junitparams.internal.parameters.ParametersReader.read(ParametersReader.java:36)
+	at junitparams.internal.TestMethod.parametersSets(TestMethod.java:121)
+	at junitparams.internal.TestMethod.isIgnored(TestMethod.java:78)
+	at junitparams.internal.TestMethod.isNotIgnored(TestMethod.java:85)
+	at junitparams.internal.ParameterisedTestClassRunner.addTestMethodForEachParamSet(ParameterisedTestClassRunner.java:87)
+	at junitparams.internal.ParameterisedTestClassRunner.computeFrameworkMethods(ParameterisedTestClassRunner.java:61)
+	at junitparams.internal.ParameterisedTestClassRunner.&lt;init&gt;(ParameterisedTestClassRunner.java:37)
+	at junitparams.JUnitParamsRunner.&lt;init&gt;(JUnitParamsRunner.java:393)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:104)
+	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:37)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)
+	at org.junit.internal.requests.ClassRequest.createRunner(ClassRequest.java:28)
+	at org.junit.internal.requests.MemoizingRequest.getRunner(MemoizingRequest.java:19)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createUnfilteredTest(JUnit4TestLoader.java:90)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createTest(JUnit4TestLoader.java:76)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.loadTests(JUnit4TestLoader.java:49)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:526)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.io.FileNotFoundException: dados_banco_pesquisa_cliente.csv (Arquivo ou diretório inexistente)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
+	at java.base/java.io.FileReader.&lt;init&gt;(FileReader.java:60)
+	at junitparams.internal.parameters.ParametersFromFile.createProperReader(ParametersFromFile.java:51)
+	at junitparams.internal.parameters.ParametersFromFile.paramsFromFile(ParametersFromFile.java:33)
+	... 27 more
+
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

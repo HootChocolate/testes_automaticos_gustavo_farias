@@ -1,0 +1,44 @@
+package negocio;
+
+import static org.junit.Assert.*;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import junitparams.FileParameters;
+import junitparams.JUnitParamsRunner;
+import junitparams.mappers.CsvWithHeaderMapper;
+
+/* First of all you need to add the JUnitParams to the pom.xml
+ * then assign the class to a CSV class
+ * */
+
+@RunWith(JUnitParamsRunner.class)  // Mark to be a CSV class 
+public class GerClienteTest_ProcuraClienteCSV {
+
+	/* Method to test find for a client
+	 * */
+	@Test
+	@FileParameters(
+			value = "resources/dados_banco_pesquisa_clientes.csv", 
+			mapper = CsvWithHeaderMapper.class) // PRECISA ADICIONAR O CABEÇALHO A ENTRADA DO MÉTODO 
+	public void testProcuraCliente(
+			int id, String nome, int idade, String email, int idContaCorrente, boolean ativo) {
+		
+		Cliente verificaCliente1 = new Cliente(id, nome, idade, email, idContaCorrente, ativo);
+		
+		ArrayList<Cliente> lst = new ArrayList<Cliente>();
+		
+		lst.add(verificaCliente1);
+		
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(lst);
+		Cliente lookFor = gerClientes.pesquisaCliente(1);
+		
+		assertEquals(verificaCliente1.getId(), lookFor.getId());
+			
+		
+ 	}	
+}

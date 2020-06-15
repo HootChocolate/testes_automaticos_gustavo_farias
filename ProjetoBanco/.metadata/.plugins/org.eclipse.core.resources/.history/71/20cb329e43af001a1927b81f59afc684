@@ -1,0 +1,31 @@
+package negocio;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import junitparams.FileParameters;
+import junitparams.JUnitParamsRunner;
+import junitparams.mappers.CsvWithHeaderMapper;
+
+/* First of all you need to add the JUnitParams to the pom.xml
+ * then assign the class to a CSV class
+ * */
+
+@RunWith(JUnitParamsRunner.class)  // Mark to be a CSV class 
+public class GerClienteTest_ProcuraClienteCSV {
+
+	String resultado; 
+	
+	@Test
+	@FileParameters(
+			value = "SistemaBancario/testes/resources/dados_banco_pesquisa_clientes.csv", 
+			mapper = CsvWithHeaderMapper.class) // PRECISA ADICIONAR O CABEÇALHO A ENTRADA DO MÉTODO 
+	public void testProcuraCliente(
+			int id, String nome, String idade, String email, int idContaCorrente, boolean ativo) {
+		System.out.println("testando");
+	}
+	
+	// Remember that you could have problem with | or , if yes look something on the web
+	// Is this little example only one answer will be shown
+	
+}
