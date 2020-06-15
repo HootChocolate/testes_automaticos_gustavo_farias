@@ -1,0 +1,16 @@
+package negocio;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import junitparams.JUnitParamsRunner;
+
+@RunWith(JUnitParamsRunner.class)
+public class GerClienteTest_ProcuraClienteCSV {
+	
+	@Test
+	public void testPesquisarClienteCSV() {
+		System.out.println("pesquisando cliente");
+	}
+	
+}

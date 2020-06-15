@@ -1,3 +1,2 @@
-id,nome,idade,email,isContaCorrente,ativo
-1,willian ronaldo,27,w.jackass2@gmail.com,2,TRUE
-2,gustavo farias,22,gugafarias@gmail.com,3,TRUE
+id,nome,idade,email,idContaCorrente,ativo
+1,willian ronaldo,27,wjackass2@gmailcom,2,TRUE

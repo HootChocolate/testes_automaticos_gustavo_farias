@@ -1,0 +1,23 @@
+package negocio;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import junitparams.FileParameters;
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
+import junitparams.mappers.CsvWithHeaderMapper;
+
+@RunWith(JUnitParamsRunner.class)
+public class GerClienteTest_ProcuraClienteCSV {
+
+	@Test
+	@Parameters(value = ",")
+	@FileParameters(
+			value = "/home/jay/treinamento/dados_banco_pesquisa_cliente.csv",
+			mapper = CsvWithHeaderMapper.class)
+	public void testPesquisarClienteCSV() {
+		
+	}
+	
+}
