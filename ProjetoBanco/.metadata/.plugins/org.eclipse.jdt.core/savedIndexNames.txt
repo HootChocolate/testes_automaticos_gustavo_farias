@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/jay/treinamento/testes_aut_mais_teorico_giovane/ProjetoBanco/.metadata/.plugins/org.eclipse.jdt.core
+3970082291.index
+646308851.index
+2973319845.index
