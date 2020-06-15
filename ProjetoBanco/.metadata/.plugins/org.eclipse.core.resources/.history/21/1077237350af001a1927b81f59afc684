@@ -1,0 +1,26 @@
+package utils;
+
+import java.util.List;
+
+import negocio.Cliente;
+
+public class ListaUtil {
+	
+	public ListaUtil() {}
+
+	/* Verify is a list is empty
+	 * @author Willian Ronaldo
+	 * @return true is the list is empty
+	 * */
+	public boolean listIsEmpty(List<Cliente> verificar) {
+		
+		boolean isEmpty = true;
+		
+		if(verificar.size() > 0) {
+			isEmpty = false;
+		}
+		
+		return isEmpty;
+	}
+	
+}

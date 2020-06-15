@@ -1,0 +1,23 @@
+package negocio;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class GerClientesTest_AdicionaCliente {
+
+	/* Testa se consegue adicionar um cliente a lista de contas do banco
+	 * */	
+	@Test
+	public void testAdicionaCliente() {
+		
+		Cliente cliente = new Cliente(12, "Fulano", 55, "email@email.com", 12, false);
+		ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+		listaClientes.add(cliente);
+		
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(listaClientes);
+		
+		
+	}
+	
+}

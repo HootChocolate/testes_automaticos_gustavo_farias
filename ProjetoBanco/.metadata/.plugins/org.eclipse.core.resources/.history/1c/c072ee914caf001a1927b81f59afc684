@@ -1,0 +1,28 @@
+package negocio;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class GerClienteTest_getClientesBanco {
+
+	@Test
+	public void testGetClientesBanco() {
+		
+		Cliente cliente = new Cliente(2, "Jose", 23, "jose@jose.com", 123, false);
+		
+		ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+		listaClientes.add(cliente);
+		
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(listaClientes);
+		
+		List<Cliente> quantidadeClientes = gerClientes.getClientesDoBanco();
+		
+		System.out.printf("Quantidade: %d", quantidadeClientes);
+		
+		
+		
+	}
+	
+}

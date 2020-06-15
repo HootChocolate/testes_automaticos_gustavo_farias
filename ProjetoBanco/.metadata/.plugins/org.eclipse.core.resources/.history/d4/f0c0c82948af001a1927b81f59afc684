@@ -1,0 +1,23 @@
+package negocio;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class GerClientesTest_RemoverCliente {
+
+	@Test
+	public void testGetClientesBanco() {
+		
+		Cliente cliente = new Cliente(1, "Mateus Mattos", 22, "matheus@mattos.com", 2, true);
+		ArrayList<Cliente> pesquisar = new ArrayList<Cliente>();
+		pesquisar.add(cliente);
+		
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(pesquisar);
+		
+		assertEquals(true, gerClientes.removeCliente(1));
+	}
+	
+}

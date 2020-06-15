@@ -1,0 +1,12 @@
+package negocio;
+
+import org.junit.Test;
+
+public class GerClientesTest_AdicionaCliente {
+
+	@Test
+	public void testAdicionaCliente() {
+		
+	}
+	
+}

@@ -1,0 +1,23 @@
+package utils;
+
+import java.util.List;
+
+import negocio.Cliente;
+
+public class Utils {
+
+	public boolean verificaSeVazio(List<Cliente> verificar) {
+		
+		System.out.println("lista que será verificada:");
+		System.out.println(verificar);
+		
+		boolean isEmpty = true;
+		
+		if(verificar.size() > 0) {
+			isEmpty = false;
+		}
+		
+		return isEmpty;
+	}
+	
+}

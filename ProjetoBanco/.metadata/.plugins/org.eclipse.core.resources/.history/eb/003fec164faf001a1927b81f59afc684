@@ -1,0 +1,15 @@
+package utils;
+
+import java.util.List;
+
+import negocio.Cliente;
+
+public class ListaEstaVazia {
+
+	public boolean verificaSeVazio(List<Cliente> verificar) {
+		
+		
+		return false;
+	}
+	
+}

@@ -1,0 +1,16 @@
+package negocio;
+
+import org.junit.Test;
+
+public class GerClienteTest_AdicionarCliente {
+
+	@Test
+	public void testAdicionarCliente() {
+		
+		Cliente cliente = new Cliente(12, "Flavio Bosta", 12, "flavio@flavio.com", 122, false);
+		
+		
+		
+	}
+	
+}

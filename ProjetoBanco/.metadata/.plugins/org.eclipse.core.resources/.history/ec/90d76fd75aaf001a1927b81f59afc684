@@ -1,0 +1,23 @@
+package negocio;
+
+import java.util.Collection;
+
+import org.junit.Test;
+
+import junitparams.Parameters;
+
+@Parameters
+public class GerClienteTest_clienteAtivo {
+
+
+	public static Collection<Object> data() {
+		
+		return null;
+	}
+	
+	@Test
+	public void testClienteAtivo() {
+		System.out.println("oi");
+	}
+	
+}

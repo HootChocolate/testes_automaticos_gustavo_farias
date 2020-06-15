@@ -1,0 +1,26 @@
+package negocio;
+
+import static org.junit.Assert.assertNotEquals;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class GerClienteTest_getClientesBanco {
+
+	@Test
+	public void testGetClientesBanco() {
+		// Retorna uma lista com os clientes do banco
+		
+		Cliente cliente = new Cliente(2, "Jose", 23, "jose@jose.com", 123, false);
+		
+		ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+		listaClientes.add(cliente);
+		
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(listaClientes);
+				
+		assertNotEquals("Pedindo por lista de clientes do banco, mas ta vazia", gerClientes.getClientesDoBanco().size(), 0);
+		
+	}
+	
+}

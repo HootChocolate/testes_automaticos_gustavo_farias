@@ -1,0 +1,55 @@
+package negocio;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)
+public class GerClienteTest_clienteAtivo {
+
+	int id;
+	String nome;
+	int idade;
+	String email;
+	int idContaCorrente;
+	boolean isAtivo;
+	
+	// Adiciona os valores que serão transpostos no @Parameters{}
+	public GerClienteTest_clienteAtivo(int id, String nome, int idade, String email, int idContaCorrente, boolean isAtivo) {
+		this.id = id;
+		this.nome = nome;
+		this.idade = idade;
+		this.email = email;
+		this.idContaCorrente = idContaCorrente;
+		this.isAtivo = isAtivo;
+	}
+	
+	@Test
+	public void verificaSePodeVotar() {
+		// Pega os valores das variaveis pra criação de um objeto
+		Cliente cliente = new Cliente(id, nome, idade, email, idContaCorrente, isAtivo);
+		ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+		listaClientes.add(cliente);
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(listaClientes);
+		
+		boolean clienteIsAtivo = gerClientes.clienteAtivo(cliente.getId());
+		
+		System.out.println(clienteIsAtivo);
+		
+		assertTrue("[ERROR] Client isn't activated", clienteIsAtivo);
+	}
+	
+	@Parameters(name = "{1} ][Ativo: {5}")
+	public static Collection<Object[]> data() {
+		return Arrays.asList(new Object[][] {
+			{1, "Jose", 12, "jose@jose.com", 12, false}
+		});
+	}
+}

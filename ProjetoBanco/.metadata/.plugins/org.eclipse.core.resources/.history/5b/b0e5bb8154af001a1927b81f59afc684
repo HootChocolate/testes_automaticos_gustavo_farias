@@ -1,0 +1,9 @@
+package negocio;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class GerClienteTest_clienteAtivo {
+
+}

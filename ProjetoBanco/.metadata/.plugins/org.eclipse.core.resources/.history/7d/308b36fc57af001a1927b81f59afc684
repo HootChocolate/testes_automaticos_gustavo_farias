@@ -1,0 +1,52 @@
+package negocio;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import junitparams.Parameters;
+
+// Verify is client is activated using DDT
+
+//@RunWith(Parameterized.class)
+public class GerClienteTest_clienteAtivo {
+
+	int id;
+	String nome;
+	int idade;
+	String email;
+	int idContaCorrente;
+	boolean isAtivo;
+	
+	public GerClienteTest_clienteAtivo(int id, String nome, int idade, String email, int idContaCorrente, boolean isAtivo) {
+		this.id = id;
+		this.nome = nome;
+		this.idade = idade;
+		this.email = email;
+		this.idContaCorrente = idContaCorrente;
+		this.isAtivo = isAtivo;
+	}
+	
+	@Parameters
+	public static Collection<Object[]> data() {
+		return Arrays.asList(new Object[][] {
+			{1, "jose", 44, "jose@jose.com", 12, false}
+		});
+	}
+	
+	@Test
+	public void testClienteAtivo() {
+		System.out.println("oi");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

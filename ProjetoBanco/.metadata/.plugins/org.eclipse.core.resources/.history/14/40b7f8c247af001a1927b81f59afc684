@@ -1,0 +1,14 @@
+package negocio;
+
+import org.junit.Test;
+
+public class GerClientesTest_RemoverCliente {
+
+	@Test
+	public void testGetClientesBanco() {
+		
+		Cliente cliente = new Cliente(1, "Mateus Mattos", 22, "matheus@mattos.com", 2, true);
+		
+	}
+	
+}

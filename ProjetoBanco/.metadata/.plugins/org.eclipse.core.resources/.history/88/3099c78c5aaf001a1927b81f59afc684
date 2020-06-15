@@ -1,0 +1,13 @@
+package negocio;
+
+import org.junit.Test;
+
+public class GerClienteTest_clienteAtivo {
+
+	
+	@Test
+	public void testClienteAtivo() {
+		System.out.println("oi");
+	}
+	
+}

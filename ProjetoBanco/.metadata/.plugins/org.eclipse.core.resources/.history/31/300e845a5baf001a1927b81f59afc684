@@ -1,0 +1,30 @@
+package negocio;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Test;
+
+import junitparams.Parameters;
+
+@Parameters
+public class GerClienteTest_clienteAtivo {
+
+	String nome;
+	
+	public GerClienteTest_clienteAtivo(String nome) {
+		this.nome = nome;
+	}
+	
+	public static Collection<Object> data() {
+		return Arrays.asList(new Object[][] {
+			{"nime"}
+		});
+	}
+	
+	@Test
+	public void testClienteAtivo() {
+		System.out.println("oi");
+	}
+	
+}

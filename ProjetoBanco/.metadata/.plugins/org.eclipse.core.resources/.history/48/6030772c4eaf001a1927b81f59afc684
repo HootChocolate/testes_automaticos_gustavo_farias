@@ -1,0 +1,14 @@
+package negocio;
+
+import org.junit.Test;
+
+public class GerClientesTest_AdicionaCliente {
+
+	/* Testa se consegue adicionar um cliente a lista de contas do banco
+	 * */	
+	@Test
+	public void testAdicionaCliente() {
+		
+	}
+	
+}

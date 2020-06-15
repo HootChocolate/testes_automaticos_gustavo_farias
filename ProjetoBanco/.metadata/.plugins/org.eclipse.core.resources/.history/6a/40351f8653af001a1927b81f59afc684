@@ -1,0 +1,12 @@
+package negocio;
+
+import org.junit.Test;
+
+public class GerClienteTest_clienteAtivo {
+
+	@Test
+	public void verificaSeClienteEstaAtivo() {
+		Cliente cliente = new Cliente(1, "Belarmino", 44, "belarmino@belarmino.com", 123, false);
+	}
+	
+}

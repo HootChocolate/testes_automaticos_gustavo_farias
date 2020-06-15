@@ -1,0 +1,32 @@
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+@RunWith(Parameterized.class)
+public class GerClienteTest_clienteAtivo {
+
+	String nome;
+	String resultado;
+	int anoNascimento;
+	
+	public GerClienteTest_clienteAtivo(String nome, String resultado, int anoNascimento) {
+		this.nome = nome;
+		this.resultado = resultado;
+		this.anoNascimento = anoNascimento;
+	}
+	
+	@Test
+	public void verificaSePodeVotar() {
+		System.out.println("Executando testes ...");
+		assertEquals(resultado, Votacao.podeVotar(nome, anoNascimento));
+	}
+	
+	@Parameters(name = "{0} ][ {1} ][ {2}")
+	public static Collection<Object[]> data() {
+		return Arrays.asList(new Object[][] {
+			{"Dheinifer", "Dheinifer seu voto é facultativo", 2020},
+			{"Jose", "Jose você não pode votar", 2010},
+			{"Maria", "Maria seu voto é obrigatório", 2000},
+			{"Ademil", "Ademil seu voto é obrigatório", 1993}			
+		});
+	}
+}

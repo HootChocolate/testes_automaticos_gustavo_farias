@@ -1,0 +1,28 @@
+package negocio;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class GerClienteTest_getClientesBanco {
+
+	@Test
+	public void testGetClientesBanco() {
+		
+		ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(listaClientes);
+		List<Cliente> quantidadeClientes = gerClientes.getClientesDoBanco();
+		
+		System.out.printf("Quantidade: %d", quantidadeClientes);
+		
+		assertNotNull(quantidadeClientes);
+		
+		
+		
+	}
+	
+}
