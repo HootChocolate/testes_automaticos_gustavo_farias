@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="GerClienteTest_validaIdade" project="ProjetoBanco" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="negocio.GerClienteTest_validaIdade" time="0.003">
+    <testsuite name="[Cliente: Jose ][Idade: 22]" time="0.003">
+      <testcase name="testValidaIdade[Cliente: Jose ][Idade: 22]" classname="negocio.GerClienteTest_validaIdade" time="0.003"/>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,45 @@
+package negocio;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)	// Sinalizo que a classe será parametrizada com DDT
+public class GerClienteTest_validaIdade {
+	
+	int id;
+	String nome;
+	int idade;
+	String email;
+	int idContaCorrente;
+	boolean ativo;
+	
+//	int id, String nome, int idade, String email, int idContaCorrente, boolean ativo
+	
+	// Passa os valores que deve ser adcionado pra fazer a construçao dos dados via construtor
+	public GerClienteTest_validaIdade(int id, String nome, int idade, String email, int idContaCorrente, boolean ativo) {
+		this.id = id;
+		this.nome = nome;
+		this.idade = idade;
+		this.email = email;
+		this.idContaCorrente = idContaCorrente;
+		this.ativo = ativo;
+	}
+	
+	@Parameters
+	public static Collection<Object> data() {
+		return Arrays.asList(new Object[][] {
+			{11, "Nome", 22, "email@email.com", 12, true}
+		});
+	}
+	
+	@Test
+	public void testValidadeIdade() {
+		System.out.println("Vai la valida a idade");
+	}
+
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="GerClienteTest_validaIdade" project="ProjetoBanco" tests="1" started="0" failures="0" errors="0" ignored="0">
+  <testcase name="negocio.GerClienteTest_validaIdade" classname="negocio.GerClienteTest_validaIdade" incomplete="true"/>
+</testrun>

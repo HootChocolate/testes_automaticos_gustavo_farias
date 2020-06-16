@@ -1,0 +1,27 @@
+package negocio;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+@RunWith(Parameterized.class)	// Sinalizo que a classe será parametrizada com DDT
+public class GerClienteTest_validaIdade {
+	
+	int id;
+	String nome;
+	int idade;
+	int idContaCorrente;
+	String email;
+	boolean ativo;
+	
+	
+	// Passa os valores que deve ser adcionado pra fazer a construçao dos dados via construtor
+	public GerClienteTest_validaIdade(int id, String nome, int idade, String email, int idContaCorrente, boolean ativo) {
+		this.id = id;
+		this.nome = nome;
+		this.idade = idade;
+		this.email = email;
+		this.idContaCorrente = idContaCorrente;
+		this.ativo = ativo;
+	}
+
+}

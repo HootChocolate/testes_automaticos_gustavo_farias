@@ -1,0 +1,50 @@
+package negocio;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)
+public class GerClienteTest_validaIdade {
+	
+	
+	@Parameter(0) public static int id;
+	@Parameter(1) public static String nome;
+	@Parameter(2) public static int idade;
+	@Parameter(3) public static String email;
+	@Parameter(4) public static int idContaCorrente;
+	@Parameter(5) public static boolean isAtivo;
+	
+	@Parameters(name = "Cliente: {1} ][Idade: {2}")
+	public static Collection<Object[]> data() {
+		return Arrays.asList(new Object[][] {
+			{1, "Jose", 22, "jose@jose.com", 12, false}
+		});
+	}
+	
+	@Test
+	public void testValidaIdade() {
+		Cliente cliente = new Cliente(id, nome, idade, email, idContaCorrente, isAtivo);
+		ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+		
+		listaClientes.add(cliente);
+		
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(listaClientes);
+		try {
+			
+			boolean idadeValida = gerClientes.validaIdade(cliente.getIdade());
+			assertTrue("Idade inválida!", idadeValida);
+		} catch(Exception e) {
+			System.out.printf("[ERROR] Ao validar idade: \n %s", e.getMessage());
+		}
+	}
+	
+}

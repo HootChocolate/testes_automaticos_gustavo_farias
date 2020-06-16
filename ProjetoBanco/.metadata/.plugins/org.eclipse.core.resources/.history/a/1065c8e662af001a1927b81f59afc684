@@ -1,0 +1,12 @@
+package negocio;
+
+import org.junit.Test;
+
+public class GerClienteTest_validaIdade {
+	
+	@Test
+	public void testValidaIdade() {
+		System.out.println("validando idade");
+	}
+	
+}
