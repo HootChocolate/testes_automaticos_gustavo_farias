@@ -1,0 +1,61 @@
+package negocio;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
+import java.util.ArrayList;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class GerClienteTest_RemoverCliente {
+	
+	int idCliente1 = 1;
+	int idCliente2 = 2;
+	GerenciadoraClientes gerClientes;
+	ArrayList<Cliente> listClientes = new ArrayList<Cliente>();
+
+	/* Cria o cenário para execução de vários testes
+	 * */
+	@Before
+	public void setup() {
+		
+		Cliente cliente1 = new Cliente(idCliente1, "Mateus Mattos", 22, "matheus@mattos.com", 2, true);
+		Cliente cliente2 = new Cliente(idCliente2, "Willian Ronaldo", 27, "w.jackass2@gmail.com", 3, true);
+		
+		listClientes.add(cliente1);
+		listClientes.add(cliente2);
+		
+		gerClientes = new GerenciadoraClientes(listClientes);
+	}
+	
+	@After
+	public void tearDown() {
+		gerClientes.limpa();
+	}
+	
+	@Test
+	public void testGetClientesBanco() {
+		
+		boolean clienteFoiRemovido = gerClientes.removeCliente(idTest);
+		Cliente clienteRemovidoIsNull = gerClientes.pesquisaCliente(idTest);
+		int totalDeClientes = gerClientes.getClientesDoBanco().size();
+		
+		assertEquals("Cliente nao fora removido", true, clienteFoiRemovido);
+		assertEquals("Total de clientes errado", 1, totalDeClientes);
+		assertNull("Cliente não foi removido, logo não é null",clienteRemovidoIsNull);
+	}
+	
+	/* Classe de teste para pesquisa de cliente a partir do seu ID
+	 * 
+	 * @author Willian Ronaldo
+	 * @date 16/04/2035
+	 * @return Um objeto Cliente
+	 * */
+	@Test
+	public void testPesquisa() {
+		
+	}
+	
+}

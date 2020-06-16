@@ -14,3 +14,7 @@
 1592256586516	Rename type 'Utils'
 1592257065225	Delete element
 1592258147192	Rename type 'GerClienteTest_clienteIsAtivo'
+1592285381319	Rename method 'testGetClientesBanco'
+1592285551063	Move compilation units
+1592286488576	Delete element
+1592287237524	Delete element

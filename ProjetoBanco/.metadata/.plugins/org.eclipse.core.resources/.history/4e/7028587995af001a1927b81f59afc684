@@ -1,0 +1,14 @@
+package negocio;
+
+import org.junit.experimental.categories.Category;
+
+import interfaces.Smoke;
+
+public class SuiteTestesCategorizados {
+
+	@Category(Smoke.class)
+	public void smoke() {
+		
+	}
+	
+}

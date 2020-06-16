@@ -1,0 +1,21 @@
+package negocio;
+
+import org.junit.experimental.categories.Categories;
+import org.junit.experimental.categories.Categories.IncludeCategory;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite.SuiteClasses;
+
+import interfaces.Positivo;
+import interfaces.Smoke;
+
+@RunWith(Categories.class)
+@IncludeCategory({
+	Smoke.class,
+	Positivo.class
+})
+@SuiteClasses({
+	SuiteTestesCategorizados.class
+})
+public class SuiteTestesGerenciarClientesCategory {
+
+}
