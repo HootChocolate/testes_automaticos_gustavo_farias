@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="GerClienteTest_ProcuraClienteCSV (1)" project="ProjetoBanco" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="negocio.GerClienteTest_ProcuraClienteCSV" time="0.002">
-    <testsuite name="testProcuraCliente" time="0.002">
-      <testcase name="[0] 1,willian ronaldo,27,wjackass2@gmailcom,2,TRUE (testProcuraCliente)" classname="negocio.GerClienteTest_ProcuraClienteCSV" time="0.002"/>
-    </testsuite>
-  </testsuite>
-</testrun>

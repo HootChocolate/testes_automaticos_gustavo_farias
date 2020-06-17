@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="GerClienteTest_clienteAtivo" project="ProjetoBanco" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="negocio.GerClienteTest_clienteAtivo" time="0.0">
-    <testsuite name="[1 ][ Jose ][ 12]" time="0.0">
-      <testcase name="verificaSePodeVotar[1 ][ Jose ][ 12]" classname="negocio.GerClienteTest_clienteAtivo" time="0.0"/>
-    </testsuite>
-  </testsuite>
-</testrun>
