@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SuiteTestesGerenciarContar" project="ProjetoBanco" tests="16" started="16" failures="0" errors="0" ignored="0">
+  <testsuite name="negocio.SuiteTestesGerenciarContar" time="0.0">
+    <testsuite name="negocio.GerContasTest_adicionarConta" time="0.0">
+      <testcase name="testAdicionarConta_saldoPositivoAtiva" classname="negocio.GerContasTest_adicionarConta" time="0.0"/>
+      <testcase name="testAdicionarConta_saldoNegativoAtiva" classname="negocio.GerContasTest_adicionarConta" time="0.0"/>
+      <testcase name="testAdicionarConta_saldoPositivoInativa" classname="negocio.GerContasTest_adicionarConta" time="0.0"/>
+      <testcase name="testAdicionarConta_saldoNegativoInativa" classname="negocio.GerContasTest_adicionarConta" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_contaAtiva" time="0.0">
+      <testcase name="testContaAtiva_inativa" classname="negocio.GerContasTest_contaAtiva" time="0.0"/>
+      <testcase name="testContaAtiva_ativa" classname="negocio.GerContasTest_contaAtiva" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_getContasDoBanco" time="0.0">
+      <testcase name="testGetContasDoBanco_ativas" classname="negocio.GerContasTest_getContasDoBanco" time="0.0"/>
+      <testcase name="testGetContasDoBanco" classname="negocio.GerContasTest_getContasDoBanco" time="0.0"/>
+      <testcase name="testGetContasDoBanco_inativas" classname="negocio.GerContasTest_getContasDoBanco" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_pesquisaConta" time="0.0">
+      <testcase name="testPesquisaConta_contaNaoExiste" classname="negocio.GerContasTest_pesquisaConta" time="0.0"/>
+      <testcase name="testPesquisaConta_contaExiste" classname="negocio.GerContasTest_pesquisaConta" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_removerConta" time="0.0">
+      <testcase name="testRemovetConta_contaInexistente" classname="negocio.GerContasTest_removerConta" time="0.0"/>
+      <testcase name="testRemoverConta" classname="negocio.GerContasTest_removerConta" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_transfereValor" time="0.0">
+      <testcase name="testTransfereValor_contaInexistente" classname="negocio.GerContasTest_transfereValor" time="0.0"/>
+      <testcase name="testTransfereValor_sucessoPositivoZerado" classname="negocio.GerContasTest_transfereValor" time="0.0"/>
+      <testcase name="testTransfereValor_saldoInsuficienteContaVazia" classname="negocio.GerContasTest_transfereValor" time="0.0"/>
+    </testsuite>
+  </testsuite>
+</testrun>

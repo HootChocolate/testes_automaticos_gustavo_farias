@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SuiteTodosOsTeste" project="ProjetoBanco" tests="28" started="28" failures="0" errors="0" ignored="0">
+  <testsuite name="negocio.SuiteTodosOsTeste" time="0.014">
+    <testsuite name="negocio.GerClientesTest_adicionaCliente" time="0.001">
+      <testcase name="testAdicionaCliente" classname="negocio.GerClientesTest_adicionaCliente" time="0.001"/>
+      <testcase name="executaEsseMétodoSomenteQuandoNecessario" classname="negocio.GerClientesTest_adicionaCliente" time="0.001"/>
+    </testsuite>
+    <testsuite name="negocio.GerClientesTest_clienteAtivo" time="0.001">
+      <testsuite name="[Jose ][Ativo: true]" time="0.001">
+        <testcase name="testClienteAtivo[Jose ][Ativo: true]" classname="negocio.GerClientesTest_clienteAtivo" time="0.001"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="negocio.GerClientesTest_getClientesBanco" time="0.0">
+      <testcase name="testGetClientesBanco" classname="negocio.GerClientesTest_getClientesBanco" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerClientesTest_pesquisarCliente" time="0.004">
+      <testcase name="testPesquisaCliente" classname="negocio.GerClientesTest_pesquisarCliente" time="0.004"/>
+    </testsuite>
+    <testsuite name="negocio.GerClientesTest_procuraClienteCSV" time="0.0">
+      <testsuite name="testProcuraCliente" time="0.0">
+        <testcase name="[0] 1,willian ronaldo,27,w.jackass2@gmail.com,2,TRUE (testProcuraCliente)" classname="negocio.GerClientesTest_procuraClienteCSV" time="0.0"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="negocio.GerClientesTest_removerCliente" time="0.001">
+      <testcase name="testRemoverClientes" classname="negocio.GerClientesTest_removerCliente" time="0.001"/>
+    </testsuite>
+    <testsuite name="negocio.GerClientesTest_validaIdade">
+      <testsuite name="[Cliente: Jose ][Idade: 18]" incomplete="true">
+        <testcase name="testValidaIdade[Cliente: Jose ][Idade: 18]" classname="negocio.GerClientesTest_validaIdade" incomplete="true"/>
+      </testsuite>
+      <testsuite name="[Cliente: Jose ][Idade: 18]" time="0.001">
+        <testcase name="testValidaIdade[Cliente: Jose ][Idade: 18]" classname="negocio.GerClientesTest_validaIdade" time="0.0"/>
+      </testsuite>
+      <testsuite name="[Cliente: Jose ][Idade: 64]" time="0.0">
+        <testcase name="testValidaIdade[Cliente: Jose ][Idade: 64]" classname="negocio.GerClientesTest_validaIdade" time="0.0"/>
+      </testsuite>
+      <testsuite name="[Cliente: Jose ][Idade: 65]" incomplete="true">
+        <testcase name="testValidaIdade[Cliente: Jose ][Idade: 65]" classname="negocio.GerClientesTest_validaIdade" incomplete="true"/>
+      </testsuite>
+      <testsuite name="[Cliente: Jose ][Idade: 65]" time="0.004">
+        <testcase name="testValidaIdade[Cliente: Jose ][Idade: 65]" classname="negocio.GerClientesTest_validaIdade" time="0.0"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_adicionarConta" time="0.0">
+      <testcase name="testAdicionarConta_saldoPositivoAtiva" classname="negocio.GerContasTest_adicionarConta" time="0.0"/>
+      <testcase name="testAdicionarConta_saldoNegativoAtiva" classname="negocio.GerContasTest_adicionarConta" time="0.0"/>
+      <testcase name="testAdicionarConta_saldoPositivoInativa" classname="negocio.GerContasTest_adicionarConta" time="0.0"/>
+      <testcase name="testAdicionarConta_saldoNegativoInativa" classname="negocio.GerContasTest_adicionarConta" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_contaAtiva" time="0.0">
+      <testcase name="testContaAtiva_inativa" classname="negocio.GerContasTest_contaAtiva" time="0.0"/>
+      <testcase name="testContaAtiva_ativa" classname="negocio.GerContasTest_contaAtiva" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_getContasDoBanco" time="0.0">
+      <testcase name="testGetContasDoBanco_ativas" classname="negocio.GerContasTest_getContasDoBanco" time="0.0"/>
+      <testcase name="testGetContasDoBanco" classname="negocio.GerContasTest_getContasDoBanco" time="0.0"/>
+      <testcase name="testGetContasDoBanco_inativas" classname="negocio.GerContasTest_getContasDoBanco" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_pesquisaConta" time="0.0">
+      <testcase name="testPesquisaConta_contaNaoExiste" classname="negocio.GerContasTest_pesquisaConta" time="0.0"/>
+      <testcase name="testPesquisaConta_contaExiste" classname="negocio.GerContasTest_pesquisaConta" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_removerConta" time="0.0">
+      <testcase name="testRemovetConta_contaInexistente" classname="negocio.GerContasTest_removerConta" time="0.0"/>
+      <testcase name="testRemoverConta" classname="negocio.GerContasTest_removerConta" time="0.0"/>
+    </testsuite>
+    <testsuite name="negocio.GerContasTest_transfereValor" time="0.002">
+      <testcase name="testTransfereValor_contaInexistente" classname="negocio.GerContasTest_transfereValor" time="0.0"/>
+      <testcase name="testTransfereValor_sucessoPositivoZerado" classname="negocio.GerContasTest_transfereValor" time="0.001"/>
+      <testcase name="testTransfereValor_saldoInsuficienteContaVazia" classname="negocio.GerContasTest_transfereValor" time="0.001"/>
+    </testsuite>
+  </testsuite>
+</testrun>

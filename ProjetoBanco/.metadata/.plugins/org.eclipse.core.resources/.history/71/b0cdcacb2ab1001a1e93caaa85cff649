@@ -1,0 +1,20 @@
+package negocio;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
+@RunWith(Suite.class)
+@SuiteClasses({
+	GerClientesTest_AdicionaCliente.class,
+	GerClientesTest_clienteAtivo.class,
+	GerClientesTest_getClientesBanco.class,
+	GerClientesTest_PesquisarCliente.class,
+	GerClientesTest_ProcuraClienteCSV.class,
+	GerClientesTest_RemoverCliente.class,
+	GerClienteTest_validaIdade.class
+})
+public class SuiteTestesGerenciarClientes {
+	
+	
+}

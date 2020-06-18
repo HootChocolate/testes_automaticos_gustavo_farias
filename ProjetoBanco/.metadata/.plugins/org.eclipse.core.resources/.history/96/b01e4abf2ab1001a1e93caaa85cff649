@@ -1,0 +1,49 @@
+package negocio;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.ArrayList;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+public class GerClienteTest_PesquisarCliente {
+
+	GerenciadoraClientes gerenciadoraClientes;
+	ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+	int idPrimeiroCliente = 1;
+	int idSegundoCliente = 2;
+	
+	@Before
+	public void setup() {
+		// Criacao do cenario
+		Cliente cliente1 = new Cliente(idPrimeiroCliente, "Gustavo Farias", 21, "gugafarias@gmail.com", 1, true);
+		Cliente cliente2 = new Cliente(idSegundoCliente, "Willian Ronaldo", 27, "willian@gmail.com", 1, true);
+		
+		clientes.add(cliente1);
+		clientes.add(cliente2);
+				
+		gerenciadoraClientes = new GerenciadoraClientes(clientes);
+	}
+	
+	@After
+	public void tearDown() {
+		gerenciadoraClientes.limpa();
+	}
+	
+	/* Este teste garante que a pesquisa por um cliente não seja null
+	 * e que o valor retornado seja o que fora solicitado.
+	 * */
+	@Test
+	public void testPesquisaCliente() { 
+
+		Cliente pesquisar = gerenciadoraClientes.pesquisaCliente(idPrimeiroCliente);
+		
+		assertNotNull("A pesquisa por um cliente não pode ser nula",pesquisar);
+		assertEquals("O id procurado não corresponde com o que fora cadastrado", idPrimeiroCliente, pesquisar.getId());
+	}
+
+}

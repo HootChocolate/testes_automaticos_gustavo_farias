@@ -20,3 +20,13 @@
 1592287237524	Delete element
 1592446360577	Rename type 'GerContasTest_pesquisarConta'
 1592449699533	Rename field 'idContaSaldoPositivo'
+1592460756804	Rename type 'GerClienteTest_clienteAtivo'
+1592460767901	Rename type 'GerClienteTest_getClientesBanco'
+1592460774451	Rename type 'GerClienteTest_PesquisarCliente'
+1592460780657	Rename type 'GerClienteTest_ProcuraClienteCSV'
+1592460787247	Rename type 'GerClienteTest_RemoverCliente'
+1592460795421	Rename type 'GerClienteTest_validaIdade'
+1592460869527	Rename type 'GerClientesTest_PesquisarCliente'
+1592460879953	Rename type 'GerClientesTest_AdicionaCliente'
+1592460904406	Rename type 'GerClientesTest_ProcuraClienteCSV'
+1592460920323	Rename type 'GerClientesTest_RemoverCliente'

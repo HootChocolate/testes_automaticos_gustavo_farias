@@ -1,0 +1,33 @@
+package negocio;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class GerClienteTest_getClientesBanco {
+	
+	// Some test can't make sense
+
+	/* Este teste garante que depois de adicinado valores em uma lista de clientes
+	 * seu tamanho não seja mais 0.
+	 * 
+	 * @author Willian Ronaldo
+	 * @date 16/06/2020
+	 * */
+	@Test
+	public void testGetClientesBanco() {
+		
+		Cliente cliente = new Cliente(2, "Jose", 23, "jose@jose.com", 123, false);
+		
+		ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+		listaClientes.add(cliente);
+		
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(listaClientes);
+				
+		assertNotEquals("Pedindo por lista de clientes do banco, mas ta vazia", gerClientes.getClientesDoBanco().size(), 0);
+		
+	}
+	
+}

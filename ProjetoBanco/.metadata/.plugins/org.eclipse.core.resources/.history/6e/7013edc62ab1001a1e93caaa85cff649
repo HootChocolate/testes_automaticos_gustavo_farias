@@ -1,0 +1,56 @@
+package negocio;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
+import java.util.ArrayList;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class GerClienteTest_RemoverCliente {
+	
+	int idCliente1 = 1;
+	int idCliente2 = 2;
+	GerenciadoraClientes gerClientes;
+	ArrayList<Cliente> listClientes = new ArrayList<Cliente>();
+
+	/* Cria o cenário para execução de vários testes
+	 * */
+	@Before
+	public void setup() {
+		
+		Cliente cliente1 = new Cliente(idCliente1, "Mateus Mattos", 22, "matheus@mattos.com", 2, true);
+		Cliente cliente2 = new Cliente(idCliente2, "Willian Ronaldo", 27, "w.jackass2@gmail.com", 3, true);
+		
+		listClientes.add(cliente1);
+		listClientes.add(cliente2);
+		
+		gerClientes = new GerenciadoraClientes(listClientes);
+	}
+	
+	@After
+	public void tearDown() {
+		gerClientes.limpa();
+	}
+	
+	/* Testa a remoção de um cliente, verificando se ele foi removido,
+	 * o total de clientes apos a remoção, e se o cliente ficou null.
+	 * 
+	 * @author Willian Ronaldo
+	 * @date 16/04/2020
+	 * */
+	@Test
+	public void testRemoverClientes() {
+		
+		boolean clienteFoiRemovido = gerClientes.removeCliente(idCliente1);
+		Cliente clienteRemovidoIsNull = gerClientes.pesquisaCliente(idCliente1);
+		int totalDeClientes = gerClientes.getClientesDoBanco().size();
+		
+		assertEquals("Erro ao verificar a remoção de um cliente", true, clienteFoiRemovido);
+		assertEquals("Total de clientes errado", 1, totalDeClientes);
+		assertNull("Cliente não foi removido, logo não é null",clienteRemovidoIsNull);
+	}
+	
+}

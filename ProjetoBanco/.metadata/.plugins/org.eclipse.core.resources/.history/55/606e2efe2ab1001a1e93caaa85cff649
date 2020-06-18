@@ -1,0 +1,45 @@
+package negocio;
+
+import static org.junit.Assert.assertNotEquals;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+
+import interfaces.Negativo;
+import interfaces.Positivo;
+import interfaces.Smoke;
+
+public class GerClientesTest_AdicionaCliente {
+
+	/* Testa se consegue adicionar um cliente a lista de contas do banco
+	 * */	
+	@Test
+	@Category(Smoke.class)
+	public void testAdicionaCliente() {
+
+		Cliente cliente = new Cliente(12, "Fulano", 55, "email@email.com", 12, false);
+		
+		ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+		
+		GerenciadoraClientes gerClientes = new GerenciadoraClientes(listaClientes);
+		
+		gerClientes.adicionaCliente(cliente);
+		
+		assertNotEquals("[ERROR] Ao testar testAdicionaCliente", gerClientes.getClientesDoBanco().size(), 0);
+		
+	}
+	
+	/* Este é um método de teste que nao deve ser executado, já que ele
+	 * está com a anotacao negativa.
+	 * @author Willian Ronaldo
+	 * @date 16/04/2020
+	 * */
+	@Test
+	@Category(Negativo.class)
+	public void executaEsseMétodoSomenteQuandoNecessario() {
+		
+	}
+	
+}
