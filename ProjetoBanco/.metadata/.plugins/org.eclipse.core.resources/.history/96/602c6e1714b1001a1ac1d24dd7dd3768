@@ -1,0 +1,101 @@
+package negocio;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class GerContasTest_transfereValor {
+
+	GerenciadoraContas gerContas;
+	ArrayList<ContaCorrente> listaContas = new ArrayList<ContaCorrente>();
+	
+	ContaCorrente conta1;
+	ContaCorrente conta2;
+	ContaCorrente conta3;
+	ContaCorrente conta4;
+	
+	int idContaSaldoPositivo1 = 0;
+	int idContaSaldoPositivo2 = 1;
+	int idContaSaldoNegativo = 2;
+	int idContaSaldoZerado = 3;
+	
+	
+	@Before
+	public void setup() {
+		/* =============== Criacao do cenario =============== */
+		
+		conta1 = new ContaCorrente(idContaSaldoPositivo1, 100, true);
+		conta2 = new ContaCorrente(idContaSaldoPositivo2, 200, false);
+		conta3 = new ContaCorrente(idContaSaldoNegativo, -100, true);
+		conta4 = new ContaCorrente(idContaSaldoZerado, 0, true);
+		
+		listaContas.add(conta1);
+		listaContas.add(conta2);
+		listaContas.add(conta3);
+		listaContas.add(conta4);
+		
+		gerContas = new GerenciadoraContas(listaContas);
+		
+	}
+	
+	@After
+	public void tearDown() {
+		gerContas.removeConta(conta1.getId());
+		gerContas.removeConta(conta2.getId());
+		gerContas.removeConta(conta3.getId());
+	}
+	
+	/* Testa transferencia entre duas contas, nesse caso a transferencia sera realizada entre uma conta com valor positivo
+	 * e uma conta com valor zerado
+	 * 
+	 * @author Willian Ronaldo
+	 * @date 17/04/2020
+	 * */
+	@Test
+	public void testTransfereValor_sucessoPositivoZerado() {
+
+		double valorTransferencia = 50;
+		
+		for(int i = 0; i < gerContas.getContasDoBanco().size(); i++) {
+
+			int id = gerContas.getContasDoBanco().get(i).getId();
+			double saldo = gerContas.getContasDoBanco().get(i).getSaldo();
+			
+			
+			if(id == idContaSaldoPositivo1) {
+				
+				
+				
+				
+			}
+			
+		}
+		
+	}
+	
+	/* Testa transferencia entre duas contas, nesse caso o saldo para transferencia sera insuficiente
+	 * já que não estamos considerando o cheque especial
+	 * 
+	 * @author Willian Ronaldo
+	 * @date 17/04/2020
+	 * */
+	@Test
+	public void testTransfereValor_saldoInsuficiente() {
+		
+	}
+	
+	/* Testa transferencia entre duas contas, nesse caso a transferencia será realizada para uma conta inexistente
+	 * 
+	 * @author Willian Ronaldo
+	 * @date 17/04/2020
+	 * */
+	@Test
+	public void testTransfereValor_contaInexistente() {
+		
+	}
+	
+}
